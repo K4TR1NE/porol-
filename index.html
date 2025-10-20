@@ -14,6 +14,7 @@
         <form method="POST">
             <div class="input-group">
                 <label for="length">Длина пароля</label>
+                <input type="number" id="length" name="length" min="4" max="50" value="{{ length }}">
             </div>
 
             <div class="input-group">
@@ -34,12 +35,12 @@
                 </div>
             </div>
 
-            <button type="submit">генерировать 5 паролей</button>
+            <button type="submit">Сгенерировать 5 паролей</button>
         </form>
 
         {% if passwords %}
         <div class="result">
-            <h3>Сгенерированные пароли</h3>
+            <h3> Сгенерированные пароли </h3>
             <div class="passwords-list">
                 {% for password in passwords %}
                 <div class="password-item">
